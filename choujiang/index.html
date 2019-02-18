@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新年抽奖</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body class="body" scroll="no">
+    <div id="swfbg" class="text-center" style="position: absolute;top: 0;width: 100%;display: none;">
+        <div style="">
+            <param name="wmode" value="transparent" />
+            <embed id="mySwf" src="media/烟花.swf" quality="high" type="application/x-shockwave-flash" width="1003" height="600" wmode="transparent">
+        </div>
+    </div>
+    <div class="container" id="main">
+        <div class="row">
+            <img src="img/最大化.png" onclick="requestFullScreen()" class="min_max_button" style="position: absolute;left: 0px;" />
+            <img src="img/最小化.png" onclick="exitFullscreen()" class="min_max_button" style="position: absolute;right: 0px;" />
+        </div>
+        <div class="row text-center" style="margin-top: 188px;">
+            <!-- <div class="target" id="target"></div> -->
+            <div class="target" id="target">软件开发部</div>
+        </div>
+        <div id="start" class="row text-center">
+            <button class="btn-start" id="btn" onclick="start()">开始</button>
+        </div>
+        <audio src="media/抽奖时候的音乐.mp3" id="bg_music" loop="true"></audio>
+        <audio src="media/中奖者诞生的音乐.mp3" id="stop_music"></audio>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
